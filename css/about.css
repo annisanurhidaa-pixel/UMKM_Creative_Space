@@ -1,0 +1,474 @@
+/*==================================================
+PAGE HERO
+==================================================*/
+
+.page-hero{
+
+    position:relative;
+
+    width:100%;
+
+    height:60vh;
+
+    min-height:480px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+}
+
+.page-hero-image{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.page-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        90deg,
+        rgba(109,46,46,.88),
+        rgba(109,46,46,.55)
+    );
+
+}
+
+.page-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:650px;
+
+    color:#fff;
+
+}
+
+.page-content h1{
+
+    color:#fff;
+
+    font-size:4rem;
+
+    margin:15px 0;
+
+}
+
+.page-content p{
+
+    color:rgba(255,255,255,.9);
+
+}
+
+.breadcrumb{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:30px;
+
+}
+
+.breadcrumb a{
+
+    color:#fff;
+
+}
+
+.breadcrumb span{
+
+    color:rgba(255,255,255,.75);
+
+}
+
+/*==================================================
+COMPANY PROFILE
+==================================================*/
+
+.company-profile{
+
+    background:#fff;
+
+}
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.about-image img{
+
+    width:100%;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.about-content h2{
+
+    margin:15px 0 25px;
+
+}
+
+.about-content p{
+
+    margin-bottom:20px;
+
+    text-align:justify;
+
+}
+
+/*==================================================
+VISION
+==================================================*/
+
+.vision-mission{
+
+    background:var(--background);
+
+}
+
+.vision-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+.vision-card{
+
+    background:#fff;
+
+    padding:45px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.vision-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.vision-card h3{
+
+    margin-bottom:20px;
+
+}
+
+.vision-card ul{
+
+    list-style:disc;
+
+    padding-left:20px;
+
+}
+
+.vision-card li{
+
+    margin-bottom:12px;
+
+    color:var(--text-light);
+
+}
+
+/*==================================================
+CORE VALUE
+==================================================*/
+
+.core-values{
+
+    background:#fff;
+
+}
+
+.value-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.value-card{
+
+    background:var(--background);
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.value-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.value-card h3{
+
+    font-size:3rem;
+
+    margin-bottom:15px;
+
+}
+
+.value-card h4{
+
+    margin-bottom:15px;
+
+}
+
+/*==================================================
+GALLERY
+==================================================*/
+
+.gallery-section{
+
+    background:var(--background);
+
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.gallery-grid img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    transition:.35s;
+
+}
+
+.gallery-grid img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/*==================================================
+OPERATIONAL
+==================================================*/
+
+.operational{
+
+    background:#fff;
+
+}
+
+.operation-card{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-dark)
+    );
+
+    color:#fff;
+
+    text-align:center;
+
+    padding:60px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.operation-card .section-tag{
+
+    color:var(--accent);
+
+}
+
+.operation-card h2{
+
+    color:#fff;
+
+    margin:15px 0;
+
+}
+
+.operation-card h3{
+
+    color:var(--accent);
+
+    font-size:2.2rem;
+
+    margin-bottom:20px;
+
+}
+
+.operation-card p{
+
+    color:rgba(255,255,255,.85);
+
+}
+
+/*==================================================
+CTA
+==================================================*/
+
+.cta{
+
+    background:var(--background);
+
+}
+
+.cta-box{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #4f2020
+    );
+
+    padding:80px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    color:#fff;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.cta-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-100px;
+
+    right:-100px;
+
+    width:250px;
+
+    height:250px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.cta-box h2{
+
+    color:#fff;
+
+    margin-bottom:20px;
+
+}
+
+.cta-box p{
+
+    color:rgba(255,255,255,.85);
+
+    max-width:700px;
+
+    margin:0 auto 40px;
+
+}
+
+.cta-button{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+/*==================================================
+IMAGE EFFECT
+==================================================*/
+
+.about-image{
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+}
+
+.about-image img{
+
+    transition:.45s;
+
+}
+
+.about-image:hover img{
+
+    transform:scale(1.08);
+
+}
+

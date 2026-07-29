@@ -1,0 +1,599 @@
+/*==================================================
+GOOGLE FONT
+==================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/*==================================================
+ROOT VARIABLES
+==================================================*/
+
+:root{
+
+    /* ===== Brand Color ===== */
+
+    --primary:#4A1010;          /* Heritage Maroon */
+    --primary-dark:#542121;
+
+    --secondary:#8B5E3C;        /* Heritage Brown */
+
+    --accent:#C8A45D;           /* Antique Gold */
+
+    --background:#F8F5EF;
+
+    --surface:#FFFDFC;
+
+    --white:#FFFFFF;
+
+    --text:#2D2D2D;
+
+    --text-light:#6B6B6B;
+
+    --border:#E8DFD1;
+
+    /* ===== Effect ===== */
+
+    --shadow:0 15px 40px rgba(0,0,0,.08);
+
+    --shadow-hover:0 20px 50px rgba(0,0,0,.12);
+
+    --radius:18px;
+
+    --transition:.35s ease;
+
+}
+
+/*==================================================
+RESET
+==================================================*/
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Poppins",sans-serif;
+
+    color:var(--text);
+
+    background:var(--background);
+
+    overflow-x:hidden;
+
+}
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+button{
+
+    cursor:pointer;
+
+    border:none;
+
+    background:none;
+
+}
+
+input,
+select,
+textarea{
+
+    font-family:inherit;
+
+}
+
+/*==================================================
+TYPOGRAPHY
+==================================================*/
+
+h1,
+h2,
+h3,
+h4{
+
+    font-family:"Cormorant Garamond",serif;
+
+    color:var(--primary);
+
+}
+
+h1{
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+}
+
+h2{
+
+    font-size:3rem;
+
+}
+
+h3{
+
+    font-size:2rem;
+
+}
+
+p{
+
+    line-height:1.8;
+
+    color:var(--text-light);
+
+}
+
+/*==================================================
+GLOBAL
+==================================================*/
+
+section{
+
+    padding:100px 0;
+
+}
+
+.container{
+
+    width:min(1200px,90%);
+
+    margin:auto;
+
+}
+
+.section-tag{
+
+    display:inline-block;
+
+    color:var(--accent);
+
+    font-weight:600;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    margin-bottom:10px;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-title h2{
+
+    margin-top:10px;
+
+}
+
+/*==================================================
+BUTTON
+==================================================*/
+
+.btn-primary{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:15px 34px;
+
+    border-radius:50px;
+
+    background:var(--primary);
+
+    color:white;
+
+    transition:var(--transition);
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-3px);
+
+}
+
+.btn-secondary{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:15px 34px;
+
+    border-radius:50px;
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+    transition:var(--transition);
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/*==================================================
+HEADER
+==================================================*/
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:999;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(0,0,0,.05);
+
+}
+
+header.sticky{
+
+    background:rgba(255,255,255,.97);
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+/*==================================================
+NAVBAR
+==================================================*/
+
+.navbar{
+
+    height:85px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.logo img{
+
+    width:100px;
+
+}
+
+.nav-menu{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+.nav-menu a{
+
+    font-weight:500;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+.nav-menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--accent);
+
+    transition:.3s;
+
+}
+
+.nav-menu a:hover::after,
+
+.nav-menu .active::after{
+
+    width:100%;
+
+}
+
+.hamburger{
+
+    display:none;
+
+    font-size:30px;
+
+}
+
+.nav-menu.show{
+
+    right:0;
+
+}
+
+/*==================================================
+CARD
+==================================================*/
+
+.card{
+
+    background:var(--surface);
+
+    border-radius:var(--radius);
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+/*==================================================
+BADGE
+==================================================*/
+
+.badge{
+
+    display:inline-block;
+
+    padding:6px 16px;
+
+    border-radius:50px;
+
+    background:var(--accent);
+
+    color:white;
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+}
+
+.popular{
+
+    background:var(--primary);
+
+}
+
+/*==================================================
+FOOTER
+==================================================*/
+
+footer{
+
+    background:var(--primary);
+
+    color:white;
+
+    padding-top:80px;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:40px;
+
+}
+
+.footer-grid h3{
+
+    color:white;
+
+    margin-bottom:20px;
+
+}
+
+.footer-grid p,
+
+.footer-grid li{
+
+    color:rgba(255,255,255,.8);
+
+    margin-bottom:10px;
+
+}
+
+.footer-grid img{
+
+    width:180px;
+
+    margin-bottom:20px;
+
+}
+
+.footer-grid a:hover{
+
+    color:var(--accent);
+
+}
+
+.copyright{
+
+    margin-top:60px;
+
+    border-top:1px solid rgba(255,255,255,.2);
+
+    padding:25px;
+
+    text-align:center;
+
+    color:rgba(255,255,255,.75);
+
+
+}
+
+#topBtn{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    display:none;
+
+    z-index:999;
+
+}
+
+/*==================================================
+UTILITY
+==================================================*/
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-2{
+
+    margin-top:20px;
+
+}
+
+.mt-4{
+
+    margin-top:40px;
+
+}
+
+.mb-2{
+
+    margin-bottom:20px;
+
+}
+
+.mb-4{
+
+    margin-bottom:40px;
+
+}
+
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:1s;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:none;
+
+}
+
+.hamburger{
+
+    display:none;
+
+}
